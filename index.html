@@ -7,18 +7,20 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 </head>
-<body>
+<body class="bg-light d-flex flex-column min-vh-100">
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-secondary border-opacity-25 py-3">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">MyPortfolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <a class="navbar-brand fw-bold fs-4 tracking-tight" href="index.html">
+        <i class="bi bi-terminal-fill text-warning me-2"></i>MyPortfolio
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <ul class="navbar-nav ms-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link active fw-semibold" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -28,84 +30,124 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="bg-primary text-white py-5">
-    <div class="container text-center py-4">
-      <h1 class="display-4 fw-bold">Hi, I'm <span class="text-warning">Sean Good</span></h1>
-      <p class="lead mt-3">A System Analysis Methods student passionate about problem-solving and technology. <a href="https://boneyard.vercel.app/how-it-works" class="text-warning">Learn more about my approach</a></p>
-      <div class="mt-4">
-        <a href="projects.html" class="btn btn-warning btn-lg me-2">View My Projects</a>
-        <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Me</a>
+  <section class="bg-dark text-white py-5 border-bottom border-secondary border-opacity-25">
+    <div class="container py-5">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <span class="badge rounded-pill bg-warning bg-opacity-10 text-warning border border-warning border-opacity-25 px-3 py-2 mb-3 fw-medium">
+            System Analysis &amp; Web Development
+          </span>
+          <h1 class="display-3 fw-bold mb-3">
+            Hi, I'm <span class="text-warning">Sean Good</span>
+          </h1>
+          <p class="lead text-light text-opacity-75 mb-4 px-md-4">
+            A System Analysis Methods student passionate about problem-solving and technology. 
+            <a href="https://boneyard.vercel.app/how-it-works" class="link-warning link-offset-2 link-underline-opacity-50 link-underline-opacity-100-hover fw-medium">
+              Learn more about my approach <i class="bi bi-arrow-up-right small"></i>
+            </a>
+          </p>
+          <div class="d-grid gap-3 d-sm-flex justify-content-sm-center pt-2">
+            <a href="projects.html" class="btn btn-warning btn-lg px-4 fw-semibold shadow-sm">
+              View My Projects
+            </a>
+            <a href="contact.html" class="btn btn-outline-light btn-lg px-4">
+              Contact Me
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Skills Summary -->
-  <section class="py-5">
+  <section class="py-5 my-3">
     <div class="container">
-      <h2 class="text-center mb-4">What I Learned</h2>
-      <div class="row g-4 text-center">
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <i class="bi bi-diagram-3 fs-1 text-primary"></i>
-              <h5 class="card-title mt-3">System Analysis</h5>
-              <p class="card-text text-muted">Understanding requirements, modeling systems, and identifying solutions.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <i class="bi bi-code-slash fs-1 text-success"></i>
-              <h5 class="card-title mt-3">Web Development</h5>
-              <p class="card-text text-muted">Building responsive websites using HTML, CSS, and Bootstrap.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <i class="bi bi-people fs-1 text-warning"></i>
-              <h5 class="card-title mt-3">Collaboration</h5>
-              <p class="card-text text-muted">Working in teams to analyze, design, and deliver real-world solutions.</p>
+      <div class="text-center mb-5">
+        <p class="text-uppercase text-primary fw-semibold small mb-1">Core Competencies</p>
+        <h2 class="fw-bold display-6">What I Learned</h2>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-2">
+            <div class="card-body p-4">
+              <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary rounded-3 p-3 mb-4">
+                <i class="bi bi-diagram-3 fs-2"></i>
+              </div>
+              <h4 class="card-title fw-bold mb-3">System Analysis</h4>
+              <p class="card-text text-secondary mb-0">
+                Understanding requirements, modeling systems, and identifying solutions.
+              </p>
             </div>
           </div>
         </div>
 
-         <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <i class="bi bi-people fs-1 text-warning"></i>
-              <h5 class="card-title mt-3">Collaboration</h5>
-              <p class="card-text text-muted">Working in teams to analyze, design, and deliver real-world solutions.</p>
+        <!-- Card 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-2">
+            <div class="card-body p-4">
+              <div class="d-inline-flex align-items-center justify-content-center bg-success bg-opacity-10 text-success rounded-3 p-3 mb-4">
+                <i class="bi bi-code-slash fs-2"></i>
+              </div>
+              <h4 class="card-title fw-bold mb-3">Web Development</h4>
+              <p class="card-text text-secondary mb-0">
+                Building responsive websites using HTML, CSS, and Bootstrap.
+              </p>
             </div>
           </div>
         </div>
-        
+
+        <!-- Card 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-2">
+            <div class="card-body p-4">
+              <div class="d-inline-flex align-items-center justify-content-center bg-warning bg-opacity-10 text-warning rounded-3 p-3 mb-4">
+                <i class="bi bi-people fs-2"></i>
+              </div>
+              <h4 class="card-title fw-bold mb-3">Collaboration</h4>
+              <p class="card-text text-secondary mb-0">
+                Working in teams to analyze, design, and deliver real-world solutions.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Call to Action -->
-  <section class="bg-light py-5">
-    <div class="container text-center">
-      <h3>Ready to see my work?</h3>
-      <p class="text-muted">Browse my projects or learn more about me below.</p>
-      <a href="about.html" class="btn btn-dark me-2">About Me</a>
-      <a href="projects.html" class="btn btn-primary">My Projects</a>
+  <section class="py-5 mt-auto">
+    <div class="container">
+      <div class="bg-white border rounded-4 shadow-sm p-4 p-md-5 text-center">
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <h3 class="fw-bold mb-2">Ready to see my work?</h3>
+            <p class="text-secondary mb-4">Browse my projects or learn more about me below.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <a href="about.html" class="btn btn-outline-dark btn-lg px-4">About Me</a>
+              <a href="projects.html" class="btn btn-primary btn-lg px-4">My Projects</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">&copy; 2026 MyPortfolio. Built with Bootstrap 5.</p>
+  <footer class="bg-dark text-white-50 text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-0 small">&copy; 2026 MyPortfolio. Built with Bootstrap 5.</p>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- AI Portfolio Chat Widget -->
   <iframe src="chat.html"
-          style="position:fixed;bottom:0;right:0;width:420px;height:620px;border:none;z-index:9999;"
+          class="position-fixed bottom-0 end-0 border-0 z-3"
+          width="420"
+          height="620"
           title="Portfolio AI Assistant">
   </iframe>
 </body>

@@ -7,19 +7,21 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 </head>
-<body>
+<body class="bg-light d-flex flex-column min-vh-100">
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-secondary border-opacity-25 py-3">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">MyPortfolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <a class="navbar-brand fw-bold fs-4" href="index.html">
+        <i class="bi bi-terminal-fill text-warning me-2"></i>MyPortfolio
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto gap-lg-2">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active fw-semibold" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
@@ -28,81 +30,193 @@
   </nav>
 
   <!-- Page Header -->
-  <section class="bg-dark text-white py-4">
-    <div class="container">
-      <h1 class="fw-bold">About Me</h1>
-      <p class="text-secondary mb-0">Get to know who I am and what I've learned.</p>
+  <section class="bg-dark text-white py-5 border-bottom border-secondary border-opacity-25">
+    <div class="container py-2">
+      <span class="badge rounded-pill bg-warning bg-opacity-10 text-warning border border-warning border-opacity-25 px-3 py-2 mb-2 fw-medium">
+        Background &amp; Education
+      </span>
+      <h1 class="display-5 fw-bold mb-2">About Me</h1>
+      <p class="lead text-light text-opacity-75 mb-0">Get to know who I am and what I've learned.</p>
     </div>
   </section>
 
   <!-- About Content -->
   <section class="py-5">
     <div class="container">
-      <div class="row align-items-center g-5">
+      <div class="row align-items-stretch g-4 g-lg-5">
 
-        <!-- Profile Photo Placeholder -->
-        <div class="col-md-4 text-center">
-          <div class="bg-secondary rounded-circle d-inline-flex align-items-center justify-content-center" style="width:180px; height:180px;">
-            <i class="bi bi-person-fill text-white" style="font-size:5rem;"></i>
+        <!-- Profile Card -->
+        <div class="col-lg-4">
+          <div class="card border-0 shadow-sm rounded-4 h-100 text-center p-4">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+              <div class="ratio ratio-1x1 w-50 mb-4">
+                <div class="bg-dark text-warning border border-warning border-opacity-25 rounded-circle d-flex align-items-center justify-content-center shadow-sm">
+                  <i class="bi bi-person-fill display-1"></i>
+                </div>
+              </div>
+              <h3 class="fw-bold mb-1">Sean Good</h3>
+              <p class="text-secondary mb-3">IS202 – System Analysis Student</p>
+              <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill">
+                UMBC &bull; Class of 2029
+              </span>
+            </div>
           </div>
-          <h4 class="mt-3 fw-bold">Sean Good</h4>
-          <p class="text-muted">IS202 – System Analysis Student</p>
         </div>
 
-        <!-- Bio -->
-        <div class="col-md-8">
-          <h2 class="fw-bold mb-3">Hello!</h2>
-          <p class="text-muted">
-            I am a student enrolled in the <strong>IS202 System Analysis Methods</strong> course. Through this course,
-            I have gained hands-on experience in analyzing business problems, designing system solutions,
-            and communicating technical ideas clearly.
-          </p>
-          <p class="text-muted">
-            This portfolio demonstrates the skills and projects I have completed throughout the semester.
-            I am eager to apply these skills in real-world environments.
-          </p>
+        <!-- Bio & Details -->
+        <div class="col-lg-8">
+          <div class="card border-0 shadow-sm rounded-4 h-100 p-4 p-md-5">
+            <div class="card-body p-0">
+              <p class="text-uppercase text-primary fw-semibold small mb-1">Introduction</p>
+              <h2 class="fw-bold mb-3">Hello!</h2>
+              <p class="text-secondary fs-6 lh-lg">
+                I am a student enrolled in the <strong class="text-dark">IS202 System Analysis Methods</strong> course. Through this course,
+                I have gained hands-on experience in analyzing business problems, designing system solutions,
+                and communicating technical ideas clearly.
+              </p>
+              <p class="text-secondary fs-6 lh-lg mb-4">
+                This portfolio demonstrates the skills and projects I have completed throughout the semester.
+                I am eager to apply these skills in real-world environments.
+              </p>
 
-          <!-- Info List -->
-          <ul class="list-group list-group-flush mt-3">
-            <li class="list-group-item px-0"><strong>University:</strong> UMBC</li>
-            <li class="list-group-item px-0"><strong>Major:</strong> Computer Science</li>
-            <li class="list-group-item px-0"><strong>Course:</strong> IS202 – System Analysis Methods</li>
-            <li class="list-group-item px-0"><strong>Year:</strong> 2026</li>
-          </ul>
+              <!-- Info Grid -->
+              <div class="row g-3 pt-2">
+                <div class="col-sm-6">
+                  <div class="p-3 bg-light rounded-3 border h-100 d-flex align-items-center gap-3">
+                    <div class="bg-primary bg-opacity-10 text-primary rounded-2 p-2">
+                      <i class="bi bi-mortarboard-fill fs-5"></i>
+                    </div>
+                    <div>
+                      <div class="small text-secondary">University</div>
+                      <div class="fw-semibold text-dark">UMBC</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="p-3 bg-light rounded-3 border h-100 d-flex align-items-center gap-3">
+                    <div class="bg-success bg-opacity-10 text-success rounded-2 p-2">
+                      <i class="bi bi-laptop fs-5"></i>
+                    </div>
+                    <div>
+                      <div class="small text-secondary">Major</div>
+                      <div class="fw-semibold text-dark">Computer Science</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="p-3 bg-light rounded-3 border h-100 d-flex align-items-center gap-3">
+                    <div class="bg-warning bg-opacity-10 text-warning rounded-2 p-2">
+                      <i class="bi bi-diagram-3-fill fs-5"></i>
+                    </div>
+                    <div>
+                      <div class="small text-secondary">Course</div>
+                      <div class="fw-semibold text-dark">IS202 – System Analysis Methods</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="p-3 bg-light rounded-3 border h-100 d-flex align-items-center gap-3">
+                    <div class="bg-danger bg-opacity-10 text-danger rounded-2 p-2">
+                      <i class="bi bi-calendar-check-fill fs-5"></i>
+                    </div>
+                    <div>
+                      <div class="small text-secondary">Year</div>
+                      <div class="fw-semibold text-dark">2029</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section class="bg-light py-5">
+  <section class="py-5 mb-4">
     <div class="container">
-      <h2 class="text-center fw-bold mb-4">My Skills</h2>
-      <div class="row g-3">
+      <div class="text-center mb-5">
+        <p class="text-uppercase text-primary fw-semibold small mb-1">Technical Proficiency</p>
+        <h2 class="fw-bold display-6">My Skills</h2>
+      </div>
+
+      <div class="row g-4">
+        <!-- Skill 1 -->
         <div class="col-md-6">
-          <p class="mb-1 fw-semibold">HTML & CSS</p>
-          <div class="progress" style="height:20px;">
-            <div class="progress-bar bg-primary" style="width:80%">80%</div>
+          <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="fw-bold text-dark"><i class="bi bi-filetype-html text-primary me-2"></i>HTML &amp; CSS</span>
+              <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3">80%</span>
+            </div>
+            <div class="progress bg-primary bg-opacity-10" role="progressbar" aria-label="HTML & CSS skill" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar bg-primary rounded-pill w-75"></div>
+            </div>
           </div>
         </div>
+
+        <!-- Skill 2 -->
         <div class="col-md-6">
-          <p class="mb-1 fw-semibold">Bootstrap</p>
-          <div class="progress" style="height:20px;">
-            <div class="progress-bar bg-success" style="width:75%">75%</div>
+          <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="fw-bold text-dark"><i class="bi bi-bootstrap-fill text-success me-2"></i>Bootstrap</span>
+              <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-3">75%</span>
+            </div>
+            <div class="progress bg-success bg-opacity-10" role="progressbar" aria-label="Bootstrap skill" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar bg-success rounded-pill w-75"></div>
+            </div>
           </div>
         </div>
+
+        <!-- Skill 3 -->
         <div class="col-md-6">
-          <p class="mb-1 fw-semibold">System Analysis</p>
-          <div class="progress" style="height:20px;">
-            <div class="progress-bar bg-warning" style="width:85%">85%</div>
+          <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="fw-bold text-dark"><i class="bi bi-diagram-3 text-warning me-2"></i>System Analysis</span>
+              <span class="badge bg-warning bg-opacity-10 text-warning rounded-pill px-3">85%</span>
+            </div>
+            <div class="progress bg-warning bg-opacity-10" role="progressbar" aria-label="System Analysis skill" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar bg-warning rounded-pill w-75"></div>
+            </div>
           </div>
         </div>
+
+        <!-- Skill 4 -->
         <div class="col-md-6">
-          <p class="mb-1 fw-semibold">Problem Solving</p>
-          <div class="progress" style="height:20px;">
-            <div class="progress-bar bg-danger" style="width:70%">80%</div>
+          <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="fw-bold text-dark"><i class="bi bi-lightbulb-fill text-danger me-2"></i>Problem Solving</span>
+              <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-3">80%</span>
+            </div>
+            <div class="progress bg-danger bg-opacity-10" role="progressbar" aria-label="Problem Solving skill" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar bg-danger rounded-pill w-75"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white-50 text-center py-4 mt-auto">
+    <div class="container">
+      <p class="mb-0 small">&copy; 2026 MyPortfolio. Built with Bootstrap 5.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AI Portfolio Chat Widget -->
+  <iframe src="chat.html"
+          class="position-fixed bottom-0 end-0 border-0 z-3"
+          width="420"
+          height="620"
+          title="Portfolio AI Assistant">
+  </iframe>
+</body>
+</html>
